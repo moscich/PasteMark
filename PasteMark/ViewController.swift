@@ -23,7 +23,11 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     }
   }
   
-  let model = ["Test1\n", "Test2\n", "Test3\n", "Test4\n", "Test5\n"];
+  var model = ["Test1\n", "Test2\n", "Test3\n", "Test4\n", "Test5\n"] {
+    didSet{
+      self.tableView.reloadData()
+    }
+  }
   var currentRow = 0
   
   override func viewDidLoad() {

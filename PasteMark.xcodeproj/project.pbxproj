@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79215B011EEBFE33008C749B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79215B001EEBFE33008C749B /* AppDelegate.swift */; };
+		79215B031EEBFE34008C749B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79215B021EEBFE34008C749B /* ViewController.swift */; };
+		79215B051EEBFE34008C749B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79215B041EEBFE34008C749B /* Assets.xcassets */; };
+		79215B081EEBFE34008C749B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79215B061EEBFE34008C749B /* Main.storyboard */; };
+		79215B171EEBFF19008C749B /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79215B121EEBFF19008C749B /* DDHotKeyCenter.m */; };
+		79215B181EEBFF19008C749B /* DDHotKeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 79215B141EEBFF19008C749B /* DDHotKeyTextField.m */; };
+		79215B191EEBFF19008C749B /* DDHotKeyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 79215B161EEBFF19008C749B /* DDHotKeyUtilities.m */; };
+		79215B1C1EEBFF38008C749B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79215B1B1EEBFF38008C749B /* Carbon.framework */; };
+		7937FE601EEC716800A20F6D /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7937FE5F1EEC716800A20F6D /* WindowController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		79215AFD1EEBFE33008C749B /* PasteMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasteMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79215B001EEBFE33008C749B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79215B021EEBFE34008C749B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79215B041EEBFE34008C749B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79215B071EEBFE34008C749B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79215B091EEBFE34008C749B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79215B101EEBFF18008C749B /* PasteMark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PasteMark-Bridging-Header.h"; sourceTree = "<group>"; };
+		79215B111EEBFF19008C749B /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
+		79215B121EEBFF19008C749B /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
+		79215B131EEBFF19008C749B /* DDHotKeyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyTextField.h; sourceTree = "<group>"; };
+		79215B141EEBFF19008C749B /* DDHotKeyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyTextField.m; sourceTree = "<group>"; };
+		79215B151EEBFF19008C749B /* DDHotKeyUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyUtilities.h; sourceTree = "<group>"; };
+		79215B161EEBFF19008C749B /* DDHotKeyUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyUtilities.m; sourceTree = "<group>"; };
+		79215B1B1EEBFF38008C749B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		7937FE5F1EEC716800A20F6D /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79215AFA1EEBFE33008C749B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79215B1C1EEBFF38008C749B /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79215AF41EEBFE33008C749B = {
+			isa = PBXGroup;
+			children = (
+				79215AFF1EEBFE33008C749B /* PasteMark */,
+				79215AFE1EEBFE33008C749B /* Products */,
+				79215B1A1EEBFF38008C749B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		79215AFE1EEBFE33008C749B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79215AFD1EEBFE33008C749B /* PasteMark.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79215AFF1EEBFE33008C749B /* PasteMark */ = {
+			isa = PBXGroup;
+			children = (
+				79215B0F1EEBFF09008C749B /* vendor */,
+				79215B001EEBFE33008C749B /* AppDelegate.swift */,
+				79215B021EEBFE34008C749B /* ViewController.swift */,
+				79215B041EEBFE34008C749B /* Assets.xcassets */,
+				79215B061EEBFE34008C749B /* Main.storyboard */,
+				79215B091EEBFE34008C749B /* Info.plist */,
+				7937FE5F1EEC716800A20F6D /* WindowController.swift */,
+			);
+			path = PasteMark;
+			sourceTree = "<group>";
+		};
+		79215B0F1EEBFF09008C749B /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				79215B111EEBFF19008C749B /* DDHotKeyCenter.h */,
+				79215B121EEBFF19008C749B /* DDHotKeyCenter.m */,
+				79215B131EEBFF19008C749B /* DDHotKeyTextField.h */,
+				79215B141EEBFF19008C749B /* DDHotKeyTextField.m */,
+				79215B151EEBFF19008C749B /* DDHotKeyUtilities.h */,
+				79215B161EEBFF19008C749B /* DDHotKeyUtilities.m */,
+				79215B101EEBFF18008C749B /* PasteMark-Bridging-Header.h */,
+			);
+			name = vendor;
+			sourceTree = "<group>";
+		};
+		79215B1A1EEBFF38008C749B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79215B1B1EEBFF38008C749B /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79215AFC1EEBFE33008C749B /* PasteMark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79215B0C1EEBFE34008C749B /* Build configuration list for PBXNativeTarget "PasteMark" */;
+			buildPhases = (
+				79215AF91EEBFE33008C749B /* Sources */,
+				79215AFA1EEBFE33008C749B /* Frameworks */,
+				79215AFB1EEBFE33008C749B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PasteMark;
+			productName = PasteMark;
+			productReference = 79215AFD1EEBFE33008C749B /* PasteMark.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79215AF51EEBFE33008C749B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Marek Mościchowski";
+				TargetAttributes = {
+					79215AFC1EEBFE33008C749B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = X6HK62UHTP;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 79215AF81EEBFE33008C749B /* Build configuration list for PBXProject "PasteMark" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79215AF41EEBFE33008C749B;
+			productRefGroup = 79215AFE1EEBFE33008C749B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79215AFC1EEBFE33008C749B /* PasteMark */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79215AFB1EEBFE33008C749B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79215B051EEBFE34008C749B /* Assets.xcassets in Resources */,
+				79215B081EEBFE34008C749B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79215AF91EEBFE33008C749B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79215B031EEBFE34008C749B /* ViewController.swift in Sources */,
+				7937FE601EEC716800A20F6D /* WindowController.swift in Sources */,
+				79215B171EEBFF19008C749B /* DDHotKeyCenter.m in Sources */,
+				79215B191EEBFF19008C749B /* DDHotKeyUtilities.m in Sources */,
+				79215B011EEBFE33008C749B /* AppDelegate.swift in Sources */,
+				79215B181EEBFF19008C749B /* DDHotKeyTextField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		79215B061EEBFE34008C749B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79215B071EEBFE34008C749B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79215B0A1EEBFE34008C749B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		79215B0B1EEBFE34008C749B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		79215B0D1EEBFE34008C749B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X6HK62UHTP;
+				INFOPLIST_FILE = PasteMark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moscichowski.PasteMark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PasteMark/PasteMark-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		79215B0E1EEBFE34008C749B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X6HK62UHTP;
+				INFOPLIST_FILE = PasteMark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moscichowski.PasteMark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PasteMark/PasteMark-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79215AF81EEBFE33008C749B /* Build configuration list for PBXProject "PasteMark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79215B0A1EEBFE34008C749B /* Debug */,
+				79215B0B1EEBFE34008C749B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79215B0C1EEBFE34008C749B /* Build configuration list for PBXNativeTarget "PasteMark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79215B0D1EEBFE34008C749B /* Debug */,
+				79215B0E1EEBFE34008C749B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79215AF51EEBFE33008C749B /* Project object */;
+}

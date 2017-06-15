@@ -7,10 +7,14 @@
 //
 
 import Cocoa
+import CocoaAsyncSocket
 
-class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, GCDAsyncSocketDelegate, NetServiceDelegate {
 
   @IBOutlet var tableView:NSTableView!
+  var sock: GCDAsyncSocket?
+  var newSock: GCDAsyncSocket?
+  var service: NetService?
   var turnedOn = false {
     didSet
     {
@@ -32,6 +36,23 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    self.registerBonjour(port: 8889)
+    
+    sock = GCDAsyncSocket(delegate: self, delegateQueue: DispatchQueue.main)
+    
+    do {
+      try sock?.accept(onPort: 8889)
+    } catch  {
+      print("error = ")
+    }
+    
+//    do {
+//      try sock?.connect(toHost: "127.0.0.1", onPort: 8889)
+//    } catch {
+//      print("erorr")
+//    }
+//    try? sock.connect(toHost: "127.0.0.1", onPort: 8889)
     
     NSEvent.addGlobalMonitorForEvents(matching: NSEventMask.keyDown) {
       event in
@@ -80,12 +101,39 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
   }
   
   @IBAction func selectionChanged(obj:Any) {
-    self.turnedOn = true
     self.currentRow = self.tableView.selectedRow
+    self.turnedOn = true
     let pasteBoard = NSPasteboard.general()
     pasteBoard.clearContents()
     pasteBoard.writeObjects([self.model[self.currentRow] as NSString])
   }
   
+  func socket(_ sock: GCDAsyncSocket, didAcceptNewSocket newSocket: GCDAsyncSocket) {
+    print("Accept yo = \(newSocket)")
+    let data = "Hello yo!".data(using: .utf8)
+    newSock = newSocket
+    newSock?.delegate = self
+//    newSock?.write(data!, withTimeout: 10, tag: 0)
+//    newSock?.readData(to: GCDAsyncSocket.crlfData() , withTimeout: 10, tag: 0)
+    newSock?.readData(withTimeout: 10, tag: 0)
+  }
+  
+  func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
+    print("Connected yo = \(host)")
+  }
+  
+  func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
+    print("data= \(String.init(data: data, encoding: .utf8))")
+  }
+  
+  func socket(_ sock: GCDAsyncSocket, didReadPartialDataOfLength partialLength: UInt, tag: Int) {
+    print("partial = \(partialLength)")
+  }
+  
+  func registerBonjour(port:Int32) {
+    self.service = NetService(domain: "", type: "_paste._tcp", name: "", port:port)
+    self.service?.delegate = self
+    self.service?.publish()
+  }
 }
 

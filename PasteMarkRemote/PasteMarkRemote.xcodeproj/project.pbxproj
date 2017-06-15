@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79E3AF681EF26BD7009398FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E3AF671EF26BD7009398FD /* AppDelegate.swift */; };
+		79E3AF6A1EF26BD7009398FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E3AF691EF26BD7009398FD /* ViewController.swift */; };
+		79E3AF6D1EF26BD7009398FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E3AF6B1EF26BD7009398FD /* Main.storyboard */; };
+		79E3AF6F1EF26BD7009398FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79E3AF6E1EF26BD7009398FD /* Assets.xcassets */; };
+		79E3AF721EF26BD7009398FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E3AF701EF26BD7009398FD /* LaunchScreen.storyboard */; };
+		79F756731EF2D1B000C17CD8 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F7566F1EF2D17A00C17CD8 /* CocoaAsyncSocket.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		79E3AF641EF26BD7009398FD /* PasteMarkRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasteMarkRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E3AF671EF26BD7009398FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79E3AF691EF26BD7009398FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79E3AF6C1EF26BD7009398FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79E3AF6E1EF26BD7009398FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79E3AF711EF26BD7009398FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79E3AF731EF26BD7009398FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79E3AF7A1EF26C3E009398FD /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = ../Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		79F7566F1EF2D17A00C17CD8 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = ../Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79E3AF611EF26BD7009398FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F756731EF2D1B000C17CD8 /* CocoaAsyncSocket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79E3AF5B1EF26BD7009398FD = {
+			isa = PBXGroup;
+			children = (
+				79F7566F1EF2D17A00C17CD8 /* CocoaAsyncSocket.framework */,
+				79E3AF661EF26BD7009398FD /* PasteMarkRemote */,
+				79E3AF651EF26BD7009398FD /* Products */,
+				79E3AF791EF26C3E009398FD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		79E3AF651EF26BD7009398FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79E3AF641EF26BD7009398FD /* PasteMarkRemote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79E3AF661EF26BD7009398FD /* PasteMarkRemote */ = {
+			isa = PBXGroup;
+			children = (
+				79E3AF671EF26BD7009398FD /* AppDelegate.swift */,
+				79E3AF691EF26BD7009398FD /* ViewController.swift */,
+				79E3AF6B1EF26BD7009398FD /* Main.storyboard */,
+				79E3AF6E1EF26BD7009398FD /* Assets.xcassets */,
+				79E3AF701EF26BD7009398FD /* LaunchScreen.storyboard */,
+				79E3AF731EF26BD7009398FD /* Info.plist */,
+			);
+			path = PasteMarkRemote;
+			sourceTree = "<group>";
+		};
+		79E3AF791EF26C3E009398FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79E3AF7A1EF26C3E009398FD /* CocoaAsyncSocket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79E3AF631EF26BD7009398FD /* PasteMarkRemote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79E3AF761EF26BD7009398FD /* Build configuration list for PBXNativeTarget "PasteMarkRemote" */;
+			buildPhases = (
+				79E3AF601EF26BD7009398FD /* Sources */,
+				79E3AF611EF26BD7009398FD /* Frameworks */,
+				79E3AF621EF26BD7009398FD /* Resources */,
+				79E3AF7C1EF26C60009398FD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PasteMarkRemote;
+			productName = PasteMarkRemote;
+			productReference = 79E3AF641EF26BD7009398FD /* PasteMarkRemote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79E3AF5C1EF26BD7009398FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Marek Mościchowski";
+				TargetAttributes = {
+					79E3AF631EF26BD7009398FD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = X6HK62UHTP;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 79E3AF5F1EF26BD7009398FD /* Build configuration list for PBXProject "PasteMarkRemote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79E3AF5B1EF26BD7009398FD;
+			productRefGroup = 79E3AF651EF26BD7009398FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79E3AF631EF26BD7009398FD /* PasteMarkRemote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79E3AF621EF26BD7009398FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79E3AF721EF26BD7009398FD /* LaunchScreen.storyboard in Resources */,
+				79E3AF6F1EF26BD7009398FD /* Assets.xcassets in Resources */,
+				79E3AF6D1EF26BD7009398FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79E3AF7C1EF26C60009398FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/CocoaAsyncSocket.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79E3AF601EF26BD7009398FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79E3AF6A1EF26BD7009398FD /* ViewController.swift in Sources */,
+				79E3AF681EF26BD7009398FD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		79E3AF6B1EF26BD7009398FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79E3AF6C1EF26BD7009398FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		79E3AF701EF26BD7009398FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79E3AF711EF26BD7009398FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79E3AF741EF26BD7009398FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79E3AF751EF26BD7009398FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79E3AF771EF26BD7009398FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X6HK62UHTP;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/";
+				INFOPLIST_FILE = PasteMarkRemote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moscichowski.PasteMarkRemote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		79E3AF781EF26BD7009398FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X6HK62UHTP;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/";
+				INFOPLIST_FILE = PasteMarkRemote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moscichowski.PasteMarkRemote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79E3AF5F1EF26BD7009398FD /* Build configuration list for PBXProject "PasteMarkRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79E3AF741EF26BD7009398FD /* Debug */,
+				79E3AF751EF26BD7009398FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79E3AF761EF26BD7009398FD /* Build configuration list for PBXNativeTarget "PasteMarkRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79E3AF771EF26BD7009398FD /* Debug */,
+				79E3AF781EF26BD7009398FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79E3AF5C1EF26BD7009398FD /* Project object */;
+}

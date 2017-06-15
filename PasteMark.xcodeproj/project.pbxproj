@@ -14,8 +14,8 @@
 		79215B171EEBFF19008C749B /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79215B121EEBFF19008C749B /* DDHotKeyCenter.m */; };
 		79215B181EEBFF19008C749B /* DDHotKeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 79215B141EEBFF19008C749B /* DDHotKeyTextField.m */; };
 		79215B191EEBFF19008C749B /* DDHotKeyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 79215B161EEBFF19008C749B /* DDHotKeyUtilities.m */; };
-		79215B1C1EEBFF38008C749B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79215B1B1EEBFF38008C749B /* Carbon.framework */; };
 		7937FE601EEC716800A20F6D /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7937FE5F1EEC716800A20F6D /* WindowController.swift */; };
+		79E3AF591EF1CB0F009398FD /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E3AF581EF1CB0F009398FD /* CocoaAsyncSocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +34,7 @@
 		79215B161EEBFF19008C749B /* DDHotKeyUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyUtilities.m; sourceTree = "<group>"; };
 		79215B1B1EEBFF38008C749B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		7937FE5F1EEC716800A20F6D /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		79E3AF581EF1CB0F009398FD /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79215B1C1EEBFF38008C749B /* Carbon.framework in Frameworks */,
+				79E3AF591EF1CB0F009398FD /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +97,7 @@
 		79215B1A1EEBFF38008C749B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79E3AF581EF1CB0F009398FD /* CocoaAsyncSocket.framework */,
 				79215B1B1EEBFF38008C749B /* Carbon.framework */,
 			);
 			name = Frameworks;
@@ -111,6 +113,7 @@
 				79215AF91EEBFE33008C749B /* Sources */,
 				79215AFA1EEBFE33008C749B /* Frameworks */,
 				79215AFB1EEBFE33008C749B /* Resources */,
+				79E3AF5A1EF1CB16009398FD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -168,6 +171,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79E3AF5A1EF1CB16009398FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/CocoaAsyncSocket.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79215AF91EEBFE33008C749B /* Sources */ = {
@@ -296,6 +316,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X6HK62UHTP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = PasteMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moscichowski.PasteMark;
@@ -313,6 +337,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X6HK62UHTP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = PasteMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moscichowski.PasteMark;

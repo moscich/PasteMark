@@ -17,11 +17,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     print("AXIsProcessTrusted \(AXIsProcessTrusted())")
     if let filename = UserDefaults.standard.value(forKey: "lastFile") as? String {
       let string = try? String.init(contentsOfFile: filename)
-      print("string = \(string)")
+//      print("string = \(string)")
       
-      let array = string?.components(separatedBy: "////\n")
-      let vc = NSApp.keyWindow?.contentViewController as! ViewController
-      vc.model = array!
+//      let array = string?.components(separatedBy: "////\n")
+//      let vc = NSApp.keyWindow?.contentViewController as! ViewController
+//      vc.model = array!
     }
     
   }
@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     print("filename = \(filename)")
     
       let string = try? String.init(contentsOfFile: filename)
-      print("string = \(string)")
+//      print("string = \(string)")
     
       let array = string?.components(separatedBy: "////\n")
     let vc = NSApp.keyWindow?.contentViewController as! ViewController

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79C38D111EF45C6400521409 /* ClipboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C38D101EF45C6400521409 /* ClipboardCell.swift */; };
 		79E3AF681EF26BD7009398FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E3AF671EF26BD7009398FD /* AppDelegate.swift */; };
 		79E3AF6A1EF26BD7009398FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E3AF691EF26BD7009398FD /* ViewController.swift */; };
 		79E3AF6D1EF26BD7009398FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E3AF6B1EF26BD7009398FD /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79C38D101EF45C6400521409 /* ClipboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardCell.swift; sourceTree = "<group>"; };
 		79E3AF641EF26BD7009398FD /* PasteMarkRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasteMarkRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E3AF671EF26BD7009398FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79E3AF691EF26BD7009398FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79C38D0F1EF45C5400521409 /* ClipboardList */ = {
+			isa = PBXGroup;
+			children = (
+				79C38D101EF45C6400521409 /* ClipboardCell.swift */,
+			);
+			path = ClipboardList;
+			sourceTree = "<group>";
+		};
 		79E3AF5B1EF26BD7009398FD = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		79E3AF661EF26BD7009398FD /* PasteMarkRemote */ = {
 			isa = PBXGroup;
 			children = (
+				79C38D0F1EF45C5400521409 /* ClipboardList */,
 				79E3AF671EF26BD7009398FD /* AppDelegate.swift */,
 				79E3AF691EF26BD7009398FD /* ViewController.swift */,
 				79E3AF6B1EF26BD7009398FD /* Main.storyboard */,
@@ -171,6 +182,7 @@
 			files = (
 				79E3AF6A1EF26BD7009398FD /* ViewController.swift in Sources */,
 				79E3AF681EF26BD7009398FD /* AppDelegate.swift in Sources */,
+				79C38D111EF45C6400521409 /* ClipboardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

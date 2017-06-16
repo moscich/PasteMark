@@ -27,7 +27,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     }
   }
   
-  var model = ["Test1\n", "Test2\n", "Test3\n", "Test4\n", "Test5\n"] {
+  var model = ["Test1\nTest\n\n\nHej hej hej", "Test2\n", "Test3\n", "Test4\n", "Test5\n"] {
     didSet{
       self.tableView.reloadData()
     }
@@ -46,13 +46,6 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     } catch  {
       print("error = ")
     }
-    
-//    do {
-//      try sock?.connect(toHost: "127.0.0.1", onPort: 8889)
-//    } catch {
-//      print("erorr")
-//    }
-//    try? sock.connect(toHost: "127.0.0.1", onPort: 8889)
     
     NSEvent.addGlobalMonitorForEvents(matching: NSEventMask.keyDown) {
       event in
@@ -110,12 +103,13 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
   
   func socket(_ sock: GCDAsyncSocket, didAcceptNewSocket newSocket: GCDAsyncSocket) {
     print("Accept yo = \(newSocket)")
-    let data = "Hello yo!".data(using: .utf8)
+    let data = try? JSONSerialization.data(withJSONObject: self.model)
     newSock = newSocket
     newSock?.delegate = self
-//    newSock?.write(data!, withTimeout: 10, tag: 0)
+    
+    newSock?.write(data!, withTimeout: 10, tag: 0)
 //    newSock?.readData(to: GCDAsyncSocket.crlfData() , withTimeout: 10, tag: 0)
-    newSock?.readData(withTimeout: 10, tag: 0)
+//    newSock?.readData(withTimeout: -1, tag: 0)
   }
   
   func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {

@@ -9,6 +9,12 @@
 import UIKit
 import CocoaAsyncSocket
 
+enum MessageType:Int {
+  case contents = 0
+  case select
+  case stop
+}
+
 class ViewController: UIViewController, NetServiceBrowserDelegate , NetServiceDelegate, GCDAsyncSocketDelegate, UITableViewDataSource {
 
   var serviceBrowser : NetServiceBrowser?
@@ -80,10 +86,22 @@ class ViewController: UIViewController, NetServiceBrowserDelegate , NetServiceDe
   }
   
   func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
-    if let objects = try? JSONSerialization.jsonObject(with: data) as? [String] {
-      self.model = objects
-      self.clipboardTableView.reloadData()
-    }    
+    switch MessageType(rawValue: tag)! {
+    case .contents:
+      if let objects = try? JSONSerialization.jsonObject(with: data) as? [String] {
+        self.model = objects
+        self.clipboardTableView.reloadData()
+      }
+    case .select:
+      if let string = String(data: data, encoding: .utf8) {
+        if let index = Int(string) {
+          self.clipboardTableView.selectRow(at: IndexPath.init(row: index, section: 0) , animated: true, scrollPosition: .middle)
+        }
+      }
+    default:
+      break
+    }
+    connectedSock!.readData(withTimeout: -1, tag: 1)
   }
     
   func socket(_ sock: GCDAsyncSocket, didWriteDataWithTag tag: Int) {

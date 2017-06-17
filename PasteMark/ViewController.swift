@@ -9,6 +9,13 @@
 import Cocoa
 import CocoaAsyncSocket
 
+enum MessageType:Int {
+  case contents = 0
+  case select = 1
+  case stop
+  case next
+}
+
 class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, GCDAsyncSocketDelegate, NetServiceDelegate {
 
   @IBOutlet var tableView:NSTableView!
@@ -23,6 +30,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
       pasteBoard.clearContents()
       pasteBoard.writeObjects([self.model[self.currentRow] as NSString])
       self.tableView.selectRowIndexes(IndexSet(integer: self.currentRow), byExtendingSelection: false)
+      self.sendSelectAtIndex(index: self.currentRow)
       }
     }
   }
@@ -58,6 +66,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
           if self.model.count > self.currentRow {
             pasteBoard.writeObjects([self.model[self.currentRow] as NSString])
             self.tableView.selectRowIndexes(IndexSet(integer: self.currentRow), byExtendingSelection: false)
+            self.sendSelectAtIndex(index: self.currentRow)
           } else {
             self.turnedOn = false
           }
@@ -107,9 +116,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     newSock = newSocket
     newSock?.delegate = self
     
-    newSock?.write(data!, withTimeout: 10, tag: 0)
-//    newSock?.readData(to: GCDAsyncSocket.crlfData() , withTimeout: 10, tag: 0)
-//    newSock?.readData(withTimeout: -1, tag: 0)
+    newSock?.write(data!, withTimeout: 10, tag: MessageType.contents.rawValue)
   }
   
   func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
@@ -128,6 +135,11 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     self.service = NetService(domain: "", type: "_paste._tcp", name: "", port:port)
     self.service?.delegate = self
     self.service?.publish()
+  }
+  
+  func sendSelectAtIndex(index:Int) {
+    let data = "\(index)".data(using: .utf8)
+    newSock?.write(data!, withTimeout: 10, tag: 1)
   }
 }
 

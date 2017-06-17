@@ -15,14 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     print("AXIsProcessTrusted \(AXIsProcessTrusted())")
-    if let filename = UserDefaults.standard.value(forKey: "lastFile") as? String {
-      let string = try? String.init(contentsOfFile: filename)
-//      print("string = \(string)")
-      
-//      let array = string?.components(separatedBy: "////\n")
-//      let vc = NSApp.keyWindow?.contentViewController as! ViewController
-//      vc.model = array!
-    }
+    
     
   }
 

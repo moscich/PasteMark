@@ -45,6 +45,16 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    if let filename = UserDefaults.standard.value(forKey: "lastFile") as? String {
+      let string = try? String.init(contentsOfFile: filename)
+      
+      
+      let array = string?.components(separatedBy: "////\n")
+      
+      self.model = array!
+    }
+    
+    
     self.registerBonjour(port: 8889)
     
     sock = GCDAsyncSocket(delegate: self, delegateQueue: DispatchQueue.main)

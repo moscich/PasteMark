@@ -117,6 +117,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     newSock?.delegate = self
     
     newSock?.write(data!, withTimeout: 10, tag: MessageType.contents.rawValue)
+    newSock?.readData(withTimeout: -1, tag: 0)
   }
   
   func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
@@ -124,7 +125,17 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
   }
   
   func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
-    print("data= \(String.init(data: data, encoding: .utf8))")
+    if let string = String(data: data, encoding: .utf8) {
+      if let index = Int(string) {
+        self.currentRow = index
+        let pasteBoard = NSPasteboard.general()
+        pasteBoard.clearContents()
+        pasteBoard.writeObjects([self.model[self.currentRow] as NSString])
+        self.tableView.selectRowIndexes(IndexSet(integer: self.currentRow), byExtendingSelection: false)
+        self.turnedOn = true
+      }
+    }
+    newSock?.readData(withTimeout: -1, tag: 0)
   }
   
   func socket(_ sock: GCDAsyncSocket, didReadPartialDataOfLength partialLength: UInt, tag: Int) {
@@ -139,7 +150,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
   
   func sendSelectAtIndex(index:Int) {
     let data = "\(index)".data(using: .utf8)
-    newSock?.write(data!, withTimeout: 10, tag: 1)
+    newSock?.write(data!, withTimeout: 10, tag: 10)
   }
 }
 

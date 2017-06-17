@@ -15,7 +15,7 @@ enum MessageType:Int {
   case stop
 }
 
-class ViewController: UIViewController, NetServiceBrowserDelegate , NetServiceDelegate, GCDAsyncSocketDelegate, UITableViewDataSource {
+class ViewController: UIViewController, NetServiceBrowserDelegate , NetServiceDelegate, GCDAsyncSocketDelegate, UITableViewDataSource, UITableViewDelegate {
 
   var serviceBrowser : NetServiceBrowser?
   var service : NetService?
@@ -116,6 +116,11 @@ class ViewController: UIViewController, NetServiceBrowserDelegate , NetServiceDe
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ClipboardCell") as? ClipboardCell else {return UITableViewCell()}
     cell.label.text = self.model?[indexPath.row]
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let data = "\(indexPath.row)".data(using: .utf8)
+    connectedSock!.write(data!, withTimeout: 1, tag: 0)
   }
   
 }
